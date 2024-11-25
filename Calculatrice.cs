@@ -38,6 +38,11 @@ namespace calculatrice
             }
         }
 
+        public void Modulo()
+        {
+            resultat = n1 % n2;
+        }
+
         public void Setn1(double n)
         {
             n1 = n;

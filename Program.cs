@@ -9,7 +9,7 @@ namespace calculatrice
             string operateur;
             Calculatrice calc = new();
 
-            Console.WriteLine("Veuillez saisir l'opération souhaité (+, -, * ou /):");
+            Console.WriteLine("Veuillez saisir l'opération souhaité (+, -, *, / ou %):");
             operateur = Console.ReadLine();
 
             Console.WriteLine("Veuillez saisir le premier nombre:");
@@ -31,6 +31,9 @@ namespace calculatrice
                     break;
                 case "/":
                     calc.Division();
+                    break;
+                case "%":
+                    calc.Modulo();
                     break;
                 default:
                     Console.WriteLine("Opérateur non reconnu");
