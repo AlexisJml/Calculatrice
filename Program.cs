@@ -7,38 +7,37 @@ namespace calculatrice
         static void Main()
         {
             string operateur;
-            double n1, n2, result;
             Calculatrice calc = new();
 
             Console.WriteLine("Veuillez saisir l'opération souhaité (+, -, * ou /):");
             operateur = Console.ReadLine();
 
             Console.WriteLine("Veuillez saisir le premier nombre:");
-            n1 = int.Parse(Console.ReadLine());
+            calc.Setn1(int.Parse(Console.ReadLine()));
 
             Console.WriteLine("Veuillez saisir le second nombre:");
-            n2 = int.Parse(Console.ReadLine());
+            calc.Setn2(int.Parse(Console.ReadLine()));
 
             switch(operateur)
             {
                 case "+":
-                    result = calc.Addition(n1, n2);
+                    calc.Addition();
                     break;
                 case "-":
-                    result = calc.Soustraction(n1, n2);
+                    calc.Soustraction();
                     break;
                 case "*":
-                    result = calc.Multiplication(n1, n2);
+                    calc.Multiplication();
                     break;
                 case "/":
-                    result = calc.Division(n1, n2);
+                    calc.Division();
                     break;
                 default:
-                    result = 0;
+                    Console.WriteLine("Opérateur non reconnu");
                     break;
             }
 
-            Console.WriteLine("Le résultat de l'opération est " + result);
+            Console.WriteLine("Le résultat de l'opération est " + calc.GetResultat());
         }
     }
 }

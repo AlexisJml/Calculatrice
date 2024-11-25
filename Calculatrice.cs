@@ -8,30 +8,49 @@ namespace calculatrice
 {
     class Calculatrice
     {
-        public double Addition(double n1, double n2)
+        private double resultat;
+        private double n1;
+        private double n2;
+
+        public void Addition()
         {
-            return n1 + n2;
+            resultat = n1 + n2;
         }
 
-        public double Soustraction(double n1, double n2)
+        public void Soustraction()
         {
-            return n1 - n2;
+            resultat = n1 - n2;
         }
 
-        public double Multiplication(double n1, double n2)
+        public void Multiplication()
         {
-            return n1 * n2;
+            resultat = n1 * n2;
         }
 
-        public double Division(double n1, double n2)
+        public void Division()
         {
             if(n2 == 0)
             {
-                return 0;
+                resultat = 0;
             }else
             {
-                return n1 / n2;
+                resultat = n1 / n2;
             }
+        }
+
+        public void Setn1(double n)
+        {
+            n1 = n;
+        }
+
+        public void Setn2(double n)
+        {
+            n1 = n;
+        }
+
+        public double GetResultat()
+        {
+            return resultat;
         }
     }
 }
